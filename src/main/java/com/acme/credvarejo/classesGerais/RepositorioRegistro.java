@@ -30,7 +30,7 @@ public class RepositorioRegistro implements InterfaceRepositorioRegistro{
 			}
 		
 		if(impressao == 0) {
-			System.out.println("Chave Inv�lida!");
+			System.out.println("Chave Invalida!");
 		}
 	}
 	

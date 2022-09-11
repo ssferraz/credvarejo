@@ -20,6 +20,7 @@ public class RepositorioCliente implements InterfaceRepositorioCliente{
 	public void alterar(long cpf, String nome) {
 		if(posicao == 0) {
 			System.out.println("Vazio!");
+			return;
 		}
 		
 		int impressao = 0;
@@ -32,13 +33,14 @@ public class RepositorioCliente implements InterfaceRepositorioCliente{
 		}
 		
 		if(impressao == 0) {
-			System.out.println("Inv�lido!");
+			System.out.println("Invalido!");
 		}
 	}
 	
 	public void excluir(long cpf) {
 		if(posicao == 0) {
 			System.out.println("Vazio!");
+			return;
 		}
 		
 		for(int i = 0; i < posicao; i++) {
@@ -62,13 +64,14 @@ public class RepositorioCliente implements InterfaceRepositorioCliente{
 		}
 		
 		if(impressoes == 0) {
-			System.out.printf("Inv�lido");
+			System.out.printf("Invalido!");
 		}
 	}
 	
 	public void buscarTodos() {
 		if(posicao == 0) {
 			System.out.println("Vazio!");
+			return;
 		}
 		
 		for(int i = 0; i < posicao; i++) {

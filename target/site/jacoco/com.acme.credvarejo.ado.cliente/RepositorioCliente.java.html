@@ -18,63 +18,66 @@ public class RepositorioCliente implements InterfaceRepositorioCliente{
 	
 	//altera nome
 	public void alterar(long cpf, String nome) {
-<span class="nc bnc" id="L21" title="All 2 branches missed.">		if(posicao == 0) {</span>
-<span class="nc" id="L22">			System.out.println(&quot;Vazio!&quot;);</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">		if(posicao == 0) {</span>
+<span class="fc" id="L22">			System.out.println(&quot;Vazio!&quot;);</span>
+<span class="fc" id="L23">			return;</span>
 		}
 		
-<span class="nc" id="L25">		int impressao = 0;</span>
+<span class="fc" id="L26">		int impressao = 0;</span>
 		
-<span class="nc bnc" id="L27" title="All 2 branches missed.">		for(int i = 0; i &lt; posicao; i++) {</span>
-<span class="nc bnc" id="L28" title="All 2 branches missed.">			if(repositorios.getClienteRepo(i).getCpf().getNumero() == cpf) {</span>
-<span class="nc" id="L29">				impressao++;</span>
-<span class="nc" id="L30">				repositorios.getClienteRepo(i).setNome(nome);</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">		for(int i = 0; i &lt; posicao; i++) {</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">			if(repositorios.getClienteRepo(i).getCpf().getNumero() == cpf) {</span>
+<span class="fc" id="L30">				impressao++;</span>
+<span class="fc" id="L31">				repositorios.getClienteRepo(i).setNome(nome);</span>
 			}
 		}
 		
-<span class="nc bnc" id="L34" title="All 2 branches missed.">		if(impressao == 0) {</span>
-<span class="nc" id="L35">			System.out.println(&quot;Inv�lido!&quot;);</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">		if(impressao == 0) {</span>
+<span class="fc" id="L36">			System.out.println(&quot;Invalido!&quot;);</span>
 		}
-<span class="nc" id="L37">	}</span>
+<span class="fc" id="L38">	}</span>
 	
 	public void excluir(long cpf) {
-<span class="nc bnc" id="L40" title="All 2 branches missed.">		if(posicao == 0) {</span>
-<span class="nc" id="L41">			System.out.println(&quot;Vazio!&quot;);</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">		if(posicao == 0) {</span>
+<span class="fc" id="L42">			System.out.println(&quot;Vazio!&quot;);</span>
+<span class="fc" id="L43">			return;</span>
 		}
 		
-<span class="nc bnc" id="L44" title="All 2 branches missed.">		for(int i = 0; i &lt; posicao; i++) {</span>
-<span class="nc bnc" id="L45" title="All 2 branches missed.">			if(repositorios.getClienteRepo(i).getCpf().getNumero() == cpf) {</span>
-<span class="nc" id="L46">				repositorios.setClienteRepo(i, null);</span>
-<span class="nc" id="L47">				repositorios.setClienteRepo(i, repositorios.getClienteRepo(posicao - 1));</span>
-<span class="nc" id="L48">				repositorios.setClienteRepo(posicao - 1, null);</span>
-<span class="nc" id="L49">				posicao--;</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">		for(int i = 0; i &lt; posicao; i++) {</span>
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">			if(repositorios.getClienteRepo(i).getCpf().getNumero() == cpf) {</span>
+<span class="fc" id="L48">				repositorios.setClienteRepo(i, null);</span>
+<span class="fc" id="L49">				repositorios.setClienteRepo(i, repositorios.getClienteRepo(posicao - 1));</span>
+<span class="fc" id="L50">				repositorios.setClienteRepo(posicao - 1, null);</span>
+<span class="fc" id="L51">				posicao--;</span>
 			}
 		}
-<span class="nc" id="L52">	}</span>
+<span class="fc" id="L54">	}</span>
 	
 	public void buscarPorChave(long cpf) {
-<span class="nc" id="L55">		int impressoes = 0;</span>
+<span class="fc" id="L57">		int impressoes = 0;</span>
 		
-<span class="nc bnc" id="L57" title="All 2 branches missed.">		for(int i = 0; i &lt; posicao; i++) {</span>
-<span class="nc bnc" id="L58" title="All 2 branches missed.">			if(repositorios.getClienteRepo(i).getCpf().getNumero() == cpf) {</span>
-<span class="nc" id="L59">				impressoes++;</span>
-<span class="nc" id="L60">				System.out.println(&quot;Cliente: &quot;+repositorios.getClienteRepo(i).getNome());</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">		for(int i = 0; i &lt; posicao; i++) {</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">			if(repositorios.getClienteRepo(i).getCpf().getNumero() == cpf) {</span>
+<span class="fc" id="L61">				impressoes++;</span>
+<span class="fc" id="L62">				System.out.println(&quot;Cliente: &quot;+repositorios.getClienteRepo(i).getNome());</span>
 			}
 		}
 		
-<span class="nc bnc" id="L64" title="All 2 branches missed.">		if(impressoes == 0) {</span>
-<span class="nc" id="L65">			System.out.printf(&quot;Inv�lido&quot;);</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">		if(impressoes == 0) {</span>
+<span class="fc" id="L67">			System.out.printf(&quot;Invalido!&quot;);</span>
 		}
-<span class="nc" id="L67">	}</span>
+<span class="fc" id="L69">	}</span>
 	
 	public void buscarTodos() {
-<span class="nc bnc" id="L70" title="All 2 branches missed.">		if(posicao == 0) {</span>
-<span class="nc" id="L71">			System.out.println(&quot;Vazio!&quot;);</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">		if(posicao == 0) {</span>
+<span class="fc" id="L73">			System.out.println(&quot;Vazio!&quot;);</span>
+<span class="fc" id="L74">			return;</span>
 		}
 		
-<span class="nc bnc" id="L74" title="All 2 branches missed.">		for(int i = 0; i &lt; posicao; i++) {</span>
-<span class="nc" id="L75">			System.out.println(&quot;Cliente: &quot;+repositorios.getClienteRepo(i).getNome()+&quot;\n&quot;);</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">		for(int i = 0; i &lt; posicao; i++) {</span>
+<span class="fc" id="L78">			System.out.println(&quot;Cliente: &quot;+repositorios.getClienteRepo(i).getNome()+&quot;\n&quot;);</span>
 		}
-<span class="nc" id="L77">	}</span>
+<span class="fc" id="L80">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

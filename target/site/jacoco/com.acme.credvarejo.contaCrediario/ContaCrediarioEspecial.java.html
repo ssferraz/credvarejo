@@ -9,11 +9,11 @@ public class ContaCrediarioEspecial extends ContaCrediario{
 	private int pontosAcumulados;
 	
 	public ContaCrediarioEspecial(IdentificadorContaCrediario identificadorConta, Cliente cliente, double saldoDevido, double limiteDeCredito, int vencimento, boolean ativa, double percentualDeDesconto, int pontosAcumulados) {
-<span class="nc" id="L12">		super(identificadorConta, cliente, saldoDevido, limiteDeCredito, vencimento, ativa);</span>
-<span class="nc" id="L13">		this.percentualDeDesconto = percentualDeDesconto;</span>
-<span class="nc" id="L14">		this.pontosAcumulados = pontosAcumulados;</span>
-<span class="nc" id="L15">		pontosAcumulados = 0;</span>
-<span class="nc" id="L16">	}</span>
+<span class="fc" id="L12">		super(identificadorConta, cliente, saldoDevido, limiteDeCredito, vencimento, ativa);</span>
+<span class="fc" id="L13">		this.percentualDeDesconto = percentualDeDesconto;</span>
+<span class="fc" id="L14">		this.pontosAcumulados = pontosAcumulados;</span>
+<span class="fc" id="L15">		pontosAcumulados = 0;</span>
+<span class="fc" id="L16">	}</span>
 	
 	//SOBRECARGA
 	public ContaCrediarioEspecial(IdentificadorContaCrediario identificadorConta, Cliente cliente, double saldoDevido, double limiteDeCredito, int vencimento, boolean ativa, double percentualDeDesconto) {
@@ -22,51 +22,51 @@ public class ContaCrediarioEspecial extends ContaCrediario{
 <span class="nc" id="L22">	}</span>
 	
 	public void efetuarPagamento(double valor) {
-<span class="nc" id="L25">		super.efetuarPagamento(valor);</span>
+<span class="fc" id="L25">		super.efetuarPagamento(valor);</span>
 		
-<span class="nc" id="L27">		double pontos = valor / 100;</span>
-<span class="nc" id="L28">		this.pontosAcumulados += (int)pontos;</span>
-<span class="nc" id="L29">	}</span>
+<span class="fc" id="L27">		double pontos = valor / 100;</span>
+<span class="fc" id="L28">		this.pontosAcumulados += (int)pontos;</span>
+<span class="fc" id="L29">	}</span>
 	
 	//SOBRECARGA
 	public void efetuarPagamento(double valor, double percentualDeDescontoPassado) {
-<span class="nc bnc" id="L33" title="All 4 branches missed.">		if(percentualDeDesconto == 0 &amp;&amp; percentualDeDescontoPassado == 0) {</span>
-<span class="nc" id="L34">			efetuarPagamento(valor);</span>
-<span class="nc bnc" id="L35" title="All 2 branches missed.">		}else if(percentualDeDesconto &gt; percentualDeDescontoPassado){</span>
-<span class="nc" id="L36">			double saldoDev = getSaldoDevido();</span>
-<span class="nc" id="L37">			double desconto = saldoDev * (percentualDeDesconto / 100);</span>
-<span class="nc" id="L38">			saldoDev -= desconto;</span>
-<span class="nc" id="L39">			saldoDev -= valor;</span>
-<span class="nc" id="L40">			setSaldoDevido(saldoDev);</span>
+<span class="pc bpc" id="L33" title="1 of 4 branches missed.">		if(percentualDeDesconto == 0 &amp;&amp; percentualDeDescontoPassado == 0) {</span>
+<span class="fc" id="L34">			efetuarPagamento(valor);</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">		}else if(percentualDeDesconto &gt; percentualDeDescontoPassado){</span>
+<span class="fc" id="L36">			double saldoDev = getSaldoDevido();</span>
+<span class="fc" id="L37">			double desconto = saldoDev * (percentualDeDesconto / 100);</span>
+<span class="fc" id="L38">			saldoDev -= desconto;</span>
+<span class="fc" id="L39">			saldoDev -= valor;</span>
+<span class="fc" id="L40">			setSaldoDevido(saldoDev);</span>
 			
-<span class="nc" id="L42">			double pontos = valor / 100;</span>
-<span class="nc" id="L43">			this.pontosAcumulados += (int)pontos;</span>
-<span class="nc" id="L44">		}else {	</span>
-<span class="nc" id="L45">			double saldoDev = getSaldoDevido();</span>
-<span class="nc" id="L46">			double desconto = saldoDev * (percentualDeDescontoPassado / 100);</span>
-<span class="nc" id="L47">			saldoDev -= desconto;</span>
-<span class="nc" id="L48">			saldoDev -= valor;</span>
-<span class="nc" id="L49">			setSaldoDevido(saldoDev);</span>
+<span class="fc" id="L42">			double pontos = valor / 100;</span>
+<span class="fc" id="L43">			this.pontosAcumulados += (int)pontos;</span>
+<span class="fc" id="L44">		}else {	</span>
+<span class="fc" id="L45">			double saldoDev = getSaldoDevido();</span>
+<span class="fc" id="L46">			double desconto = saldoDev * (percentualDeDescontoPassado / 100);</span>
+<span class="fc" id="L47">			saldoDev -= desconto;</span>
+<span class="fc" id="L48">			saldoDev -= valor;</span>
+<span class="fc" id="L49">			setSaldoDevido(saldoDev);</span>
 			
-<span class="nc" id="L51">			double pontos = valor / 100;</span>
-<span class="nc" id="L52">			this.pontosAcumulados += (int)pontos;</span>
+<span class="fc" id="L51">			double pontos = valor / 100;</span>
+<span class="fc" id="L52">			this.pontosAcumulados += (int)pontos;</span>
 		}
-<span class="nc" id="L54">	}</span>
+<span class="fc" id="L54">	}</span>
 	
 	public double getPercentualDeDesconto() {
-<span class="nc" id="L57">		return this.percentualDeDesconto;</span>
+<span class="fc" id="L57">		return this.percentualDeDesconto;</span>
 	}
 	
 	public void setPercentualDeDesconto(double novoPercentualDeDesconto) {
-<span class="nc" id="L61">		this.percentualDeDesconto = novoPercentualDeDesconto;</span>
-<span class="nc" id="L62">	}</span>
+<span class="fc" id="L61">		this.percentualDeDesconto = novoPercentualDeDesconto;</span>
+<span class="fc" id="L62">	}</span>
 	
 	public int getPontosAcumulados() {
-<span class="nc" id="L65">		return this.pontosAcumulados;</span>
+<span class="fc" id="L65">		return this.pontosAcumulados;</span>
 	}
 	
 	public void setPontosAcumulados(int novoPontosAcumulados) {
-<span class="nc" id="L69">		this.pontosAcumulados = novoPontosAcumulados;</span>
-<span class="nc" id="L70">	}</span>
+<span class="fc" id="L69">		this.pontosAcumulados = novoPontosAcumulados;</span>
+<span class="fc" id="L70">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

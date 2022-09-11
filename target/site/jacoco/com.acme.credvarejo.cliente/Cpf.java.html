@@ -14,26 +14,26 @@ public class Cpf {
 
 	    int mult, soma, i, n, dig;
 	    
-<span class="nc bnc" id="L17" title="All 2 branches missed.">	    if(!x10) numDig = 1;</span>
-<span class="nc bnc" id="L18" title="All 2 branches missed.">	    for(n=1; n&lt;=numDig; n++){</span>
-<span class="nc" id="L19">	        soma = 0;</span>
-<span class="nc" id="L20">	        mult = 2;</span>
-<span class="nc bnc" id="L21" title="All 2 branches missed.">	        for(i=dado.length() - 1; i &gt;= 0; i--){</span>
-<span class="nc" id="L22">	            soma += (mult * Integer.parseInt(dado.substring(i, i + 1)));</span>
-<span class="nc bnc" id="L23" title="All 2 branches missed.">	            if(++mult &gt; limMult) mult = 2;</span>
+<span class="pc bpc" id="L17" title="1 of 2 branches missed.">	    if(!x10) numDig = 1;</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">	    for(n=1; n&lt;=numDig; n++){</span>
+<span class="fc" id="L19">	        soma = 0;</span>
+<span class="fc" id="L20">	        mult = 2;</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">	        for(i=dado.length() - 1; i &gt;= 0; i--){</span>
+<span class="fc" id="L22">	            soma += (mult * Integer.parseInt(dado.substring(i, i + 1)));</span>
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">	            if(++mult &gt; limMult) mult = 2;</span>
 	        }
-<span class="nc bnc" id="L25" title="All 2 branches missed.">	        if(x10){</span>
+<span class="pc bpc" id="L25" title="1 of 2 branches missed.">	        if(x10){</span>
 <span class="nc" id="L26">	            dig = ((soma * 10) % 11) % 10;</span>
-	        } else {
-<span class="nc" id="L28">	            dig = soma % 11;</span>
+<span class="nc" id="L27">	        } else {</span>
+<span class="fc" id="L28">	            dig = soma % 11;</span>
 	        }
-<span class="nc bnc" id="L30" title="All 2 branches missed.">	        if(dig == 10){</span>
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">	        if(dig == 10){</span>
 <span class="nc" id="L31">	        	dado += &quot;X&quot;;</span>
-	        } else {
-<span class="nc" id="L33">	        	dado += String.valueOf(dig);</span>
+<span class="nc" id="L32">	        } else {</span>
+<span class="fc" id="L33">	        	dado += String.valueOf(dig);</span>
 	        }
 	    }
-<span class="nc" id="L36">	    return dado.substring(dado.length() - numDig, dado.length());</span>
+<span class="fc" id="L36">	    return dado.substring(dado.length() - numDig, dado.length());</span>
 	}
 
 	//VERIFICA SE O CPF � V�LIDO  
@@ -45,8 +45,8 @@ public class Cpf {
 <span class="pc bpc" id="L45" title="2 of 4 branches missed.">	CPF.equals(&quot;44444444444&quot;) || CPF.equals(&quot;55555555555&quot;) ||</span>
 <span class="pc bpc" id="L46" title="2 of 4 branches missed.">	CPF.equals(&quot;66666666666&quot;) || CPF.equals(&quot;77777777777&quot;) ||</span>
 <span class="pc bpc" id="L47" title="2 of 4 branches missed.">	CPF.equals(&quot;88888888888&quot;) || CPF.equals(&quot;99999999999&quot;) ||</span>
-<span class="pc bpc" id="L48" title="1 of 2 branches missed.">	    (CPF.length() != 11))</span>
-<span class="nc" id="L49">	    return(false);</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">	    (CPF.length() != 11))</span>
+<span class="fc" id="L49">	    return(false);</span>
 	  
 	char dig10, dig11;
 	int sm, i, r, num, peso;

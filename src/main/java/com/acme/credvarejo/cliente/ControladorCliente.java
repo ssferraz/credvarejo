@@ -11,7 +11,7 @@ public class ControladorCliente {
 	
 	public void incluir(Cliente cliente) {
 		if(cliente == null) {
-			System.out.println("Inv�lido!");
+			System.out.println("Invalido!");
 		}else {
 			cliente.validar();
 			repositorio.incluir(cliente);
@@ -24,7 +24,7 @@ public class ControladorCliente {
 	
 	public void excluir(long valor) {
 		if(valor == 0) {
-			System.out.println("CPF inv�lido!");
+			System.out.println("CPF invalido!");
 		}else {
 			repositorio.excluir(valor);
 		}
@@ -32,7 +32,7 @@ public class ControladorCliente {
 	
 	public void buscar(long valor) {
 		if(valor == 0) {
-			System.out.println("CPF inv�lido!");
+			System.out.println("CPF invalido!");
 		}else {
 			repositorio.buscarPorChave(valor);
 		}

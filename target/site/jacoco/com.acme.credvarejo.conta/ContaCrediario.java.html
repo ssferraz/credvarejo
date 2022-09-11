@@ -23,8 +23,8 @@ public class ContaCrediario extends Registro{
 <span class="fc" id="L23">	}</span>
 	
 	public void efetuarPagamento(double valor) {
-<span class="nc" id="L26">		this.saldoDevido -= valor;</span>
-<span class="nc" id="L27">	}</span>
+<span class="fc" id="L26">		this.saldoDevido -= valor;</span>
+<span class="fc" id="L27">	}</span>
 	
 	public void efetuarCompra(double valor) {
 <span class="nc" id="L30">		this.saldoDevido += valor;</span>
@@ -47,7 +47,7 @@ public class ContaCrediario extends Registro{
 <span class="nc" id="L47">	}</span>
 
 	public Cliente getCliente() {
-<span class="nc" id="L50">		return cliente;</span>
+<span class="fc" id="L50">		return cliente;</span>
 	}
 
 	public void setCliente(Cliente cliente) {
@@ -94,16 +94,16 @@ public class ContaCrediario extends Registro{
 	}
 	
 	public void validar() {
-<span class="nc bnc" id="L97" title="All 2 branches missed.">		if(this.identificadorConta != null) {</span>
-<span class="nc bnc" id="L98" title="All 2 branches missed.">			if(this.cliente != null) {</span>
-<span class="nc bnc" id="L99" title="All 2 branches missed.">				if(this.saldoDevido &gt; 0) {</span>
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">		if(this.identificadorConta != null) {</span>
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">			if(this.cliente != null) {</span>
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">				if(this.saldoDevido &gt; 0) {</span>
 <span class="nc" id="L100">					System.out.println(&quot;Conta Validada&quot;);</span>
-					}else {
-<span class="nc" id="L102">						System.out.println(&quot;Conta invalida&quot;);</span>
+<span class="nc" id="L101">					}else {</span>
+<span class="fc" id="L102">						System.out.println(&quot;Conta invalida&quot;);</span>
 				}
 			}
 		}
-<span class="nc" id="L106">	}</span>
+<span class="fc" id="L106">	}</span>
 	
 	//REPOSIT�RIO
 <span class="fc" id="L109">		ContaCrediario[] repositorio = new ContaCrediario[150];</span>

@@ -54,7 +54,7 @@ public class RepositorioContaCrediario implements InterfaceRepositorioContaCredi
 			System.out.println("Nome: "+contas[i].getCliente().getNome()+
 							"\nID Conta: "+contas[i].getIdentificadorConta().getNumero()+
 							"\nCPF: "+contas[i].getCliente().getCpf().getNumero()+
-							"\nLimite de Cr�dito: "+contas[i].getLimiteDeCredito()+"\n");
+							"\nLimite de Credito: "+contas[i].getLimiteDeCredito()+"\n");
 		}
 	}
 	

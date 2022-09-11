@@ -12,18 +12,14 @@ import com.acme.credvarejo.cliente.Cpf;
 
 public class ContaCrediarioTest {
 	
-	IdentificadorContaCrediario identificadorConta;
-	Cpf cpf;
-	Date clienteDesde;
-	Cliente cliente;
 	ContaCrediario contaCrediario;
 
 	@Before
 	public void setUp() throws Exception {
-		identificadorConta = new IdentificadorContaCrediario((long) 2);
-		cpf = new Cpf(1);
-		clienteDesde = new Date(2021, 4, 9);
-		cliente = new Cliente(cpf, "samuel", 22, clienteDesde, 800, 0);
+		IdentificadorContaCrediario identificadorConta = new IdentificadorContaCrediario((long) 2);
+		Cpf cpf = new Cpf(1);
+		Date clienteDesde = new Date(2021, 4, 9);
+		Cliente cliente = new Cliente(cpf, "samuel", 22, clienteDesde, 800, 0);
 		contaCrediario = new ContaCrediario(identificadorConta, cliente, 25, 100, 14, true);
 	}
 

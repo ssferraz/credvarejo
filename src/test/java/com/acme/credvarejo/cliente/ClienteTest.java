@@ -23,6 +23,7 @@ public class ClienteTest {
 		System.setOut(new PrintStream(outputStreamCaptor));
 	}
 
+	
 	@Test
 	public void testGetChave() {
 		assertEquals(cliente.getChave(), "813277780");

@@ -7,15 +7,15 @@ public class RepositorioContaCrediario implements InterfaceRepositorioContaCredi
 	private ContaCrediario[] contas;
 	private int indice;
 	
-<span class="nc" id="L10">	public RepositorioContaCrediario() {</span>
-<span class="nc" id="L11">		contas = new ContaCrediario[150];</span>
-<span class="nc" id="L12">		indice = 0;</span>
-<span class="nc" id="L13">	}</span>
+<span class="fc" id="L10">	public RepositorioContaCrediario() {</span>
+<span class="fc" id="L11">		contas = new ContaCrediario[150];</span>
+<span class="fc" id="L12">		indice = 0;</span>
+<span class="fc" id="L13">	}</span>
 	
 	public void incluir(ContaCrediario c){
-<span class="nc" id="L16">		contas[indice] = c;</span>
-<span class="nc" id="L17">		indice++;</span>
-<span class="nc" id="L18">	}</span>
+<span class="fc" id="L16">		contas[indice] = c;</span>
+<span class="fc" id="L17">		indice++;</span>
+<span class="fc" id="L18">	}</span>
 	
 	//altera o limite de cr�dito
 	public void alterar(IdentificadorContaCrediario atual, double nova) {
@@ -54,7 +54,7 @@ public class RepositorioContaCrediario implements InterfaceRepositorioContaCredi
 <span class="nc" id="L54">			System.out.println(&quot;Nome: &quot;+contas[i].getCliente().getNome()+</span>
 <span class="nc" id="L55">							&quot;\nID Conta: &quot;+contas[i].getIdentificadorConta().getNumero()+</span>
 <span class="nc" id="L56">							&quot;\nCPF: &quot;+contas[i].getCliente().getCpf().getNumero()+</span>
-<span class="nc" id="L57">							&quot;\nLimite de Cr�dito: &quot;+contas[i].getLimiteDeCredito()+&quot;\n&quot;);</span>
+<span class="nc" id="L57">							&quot;\nLimite de Credito: &quot;+contas[i].getLimiteDeCredito()+&quot;\n&quot;);</span>
 		}
 <span class="nc" id="L59">	}</span>
 	

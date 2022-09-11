@@ -27,7 +27,7 @@ public class ControladorContaCrediario {
 	
 	public void creditar(IdentificadorContaCrediario id, double valor, ControladorMovimentoCrediario movimento) {
 		if(id == null) {
-			System.out.println("Inv�lido!");
+			System.out.println("Invalido!");
 		}else {
 			ContaCrediario c = null;
 			c = repositorio.buscarPorChave(id);
@@ -40,7 +40,7 @@ public class ControladorContaCrediario {
 	
 	public void debitar(IdentificadorContaCrediario id, double valor, ControladorMovimentoCrediario movimento) {
 		if(id == null) {
-			System.out.println("Inv�lido!");
+			System.out.println("Invalido!");
 		}else {
 			ContaCrediario c = repositorio.buscarPorChave(id);
 			if(valor <= c.getLimiteDeCredito()) {	
@@ -55,7 +55,7 @@ public class ControladorContaCrediario {
 	
 	public void buscar(IdentificadorContaCrediario id) {
 		if(id == null) {
-			System.out.println("Inv�lido!");
+			System.out.println("Invalido!");
 		}else {
 			repositorio.buscarPorChave(id);
 		}

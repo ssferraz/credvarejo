@@ -14,19 +14,22 @@ public class CpfTest {
 		cpf = new Cpf(1926369547);
 	}
 
-	/*
+	
 	@Test
 	public void testCalculaDigitoMod11() {
-		
+		assertEquals(cpf.calculaDigitoMod11("15", 3, 5, false), "2");
 	}
-
-	 */
 
 	@Test
 	public void testIsCPF() {
 		assertTrue(cpf.isCPF("81327778084"));
 	}
 	
+	@Test
+	public void testIsCPFComMaisDe11Digitos() {
+		assertTrue(!cpf.isCPF("8132777808454"));
+	}
+		
 	@Test
 	public void testImprimeCPF() {
 		assertEquals(cpf.imprimeCPF("19263695474"), "192.636.954-74");
